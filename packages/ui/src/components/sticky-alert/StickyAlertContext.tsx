@@ -95,9 +95,11 @@ export function useStickyAlertContext(params?: useContextParamsType) {
       { ...alert, timeout: alert?.timeout ?? 5 }
     ])
   }
+
   const clearLastAlert = () => {
     setAlerts?.((storedAlerts) => [...storedAlerts?.slice(0, -1)])
   }
+
   // adding a timeout decrementer and clearing timeouted alerts
   useEffect(() => {
     const interval = autoDispose

@@ -7,15 +7,5 @@ import { ReactComponent as MouseLeft } from './mouse-left.svg'
 import mouseRightImage from './mouse-right.svg'
 import { ReactComponent as MouseRight } from './mouse-right.svg'
 
-export {
-	hotkeyKeyImage,
-	hotkeyImage,
-	mouseLeftImage,
-	mouseRightImage,
-}
-export {
-	HotkeyKey,
-	Hotkey,
-	MouseLeft,
-	MouseRight,
-}
+export { hotkeyKeyImage, hotkeyImage, mouseLeftImage, mouseRightImage }
+export { HotkeyKey, Hotkey, MouseLeft, MouseRight }

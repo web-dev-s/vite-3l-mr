@@ -93,6 +93,7 @@ export const RegisterWithCognitoForm = memo(
     }, [watch])
     useEffect(() => {
       return () => clearLastAlert()
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     const tryLoggingIn = useCallback(async () => {
       const response = await Auth.signIn(
@@ -110,6 +111,7 @@ export const RegisterWithCognitoForm = memo(
         if (error?.code === 'NotAuthorizedException') {
           onRedirectAtLogin?.({ code: error?.code, message: error?.message })
         }
+
         if (error?.code === 'InvalidParameterException') {
           onRedirectAtLogin?.({ code: error?.code, message: error?.message })
         }

@@ -97,6 +97,7 @@ export const RecoverPasswordForm = memo((props: RecoverPasswordProps) => {
   ) => {
     handleSubmit(onSubmit)(e)
   }
+
   return (
     <>
       {renderCase === 'requestChange' && (

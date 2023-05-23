@@ -10,16 +10,10 @@ import wordmarkImage from './wordmark.svg'
 import { ReactComponent as Wordmark } from './wordmark.svg'
 
 export {
-	facebookFilledImage,
-	googleFilledImage,
-	googleImage,
-	linkedinFilledImage,
-	wordmarkImage,
+  facebookFilledImage,
+  googleFilledImage,
+  googleImage,
+  linkedinFilledImage,
+  wordmarkImage
 }
-export {
-	FacebookFilled,
-	GoogleFilled,
-	Google,
-	LinkedinFilled,
-	Wordmark,
-}
+export { FacebookFilled, GoogleFilled, Google, LinkedinFilled, Wordmark }

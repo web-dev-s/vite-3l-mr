@@ -11,8 +11,6 @@ export const Main: FC = () => {
 
   useTokenChecker(() => navigate({ to: 'login', replace: true }))
 
-  const iRef = useRef<HTMLIFrameElement | null>(null)
-
   return (
     <Container
       modifiers={['column', 'fullHeight', 'verticalSpaced', 'spacedEvenly']}

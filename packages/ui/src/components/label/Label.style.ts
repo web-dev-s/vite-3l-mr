@@ -3,7 +3,6 @@ import {
   applyStyleModifiers,
   ModifiersConfig
 } from 'styled-components-modifiers'
-import { Colors } from '../../theme'
 import { LabelProps } from './Label'
 
 const MODIFIER_CONFIG: ModifiersConfig = {
