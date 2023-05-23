@@ -39,7 +39,7 @@ node_modules
 /coverage
 
 # Enviroment
-.env
+# .env
 .env.local
 .env.development.local
 .env.test.local
