@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@monorepo/common/*": ["common/src/*"],
+      "@monorepo-ui/*": ["packages/ui/src/*"],
+      "@app1/*": ["apps/app1/src/*"],
+      "@app2/*": ["apps/app2/src/*"]
+    }
+  }
+}

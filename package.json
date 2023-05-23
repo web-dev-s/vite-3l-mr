@@ -1,0 +1,79 @@
+{
+  "name": "monorepo-frontend",
+  "private": true,
+  "version": "3.0.0",
+  "engines": {
+    "node": ">=16.15.1"
+  },
+  "keywords": [
+    "frontend",
+    "monorepo",
+    "metaverse"
+  ],
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "format": "prettier --write .",
+    "lint:app1": "eslint apps/app1/src/**/*.{js,ts,tsx}",
+    "lint:app2": "eslint apps/app2/src/**/*.{js,ts,tsx}",
+    "lint:app": "eslint apps/*/src/**/*.{js,ts,tsx}",
+    "lint:common": "eslint common/src/**/*.{js,ts,tsx}",
+    "lint:ui": "eslint packages/*/src/**/*.{js,ts,tsx}",
+    "lint": "eslint {apps/*,common,packages/*}/src/**/*.{ts,tsx}",
+    "lint:fix": "eslint {apps/*,common,packages/*}/src/**/*.{ts,tsx} --fix",
+    "build:app1": "pnpm --filter=./apps/app1 run build",
+    "build:app2": "pnpm --filter=./apps/app2 run build",
+    "build:app": "pnpm --filter=./apps/* run build",
+    "build:ui": "pnpm --filter=./packages/ui run build",
+    "build": "pnpm -r --parallel --filter=./{apps,packages}/* run build",
+    "dev:app1": "pnpm --filter=./apps/app1 run dev",
+    "dev:app2": "pnpm --filter=./apps/app2 run dev",
+    "dev:app": "pnpm --filter=./apps/* run dev",
+    "dev:ui": "pnpm --filter=./packages/ui run dev",
+    "dev": "pnpm -r --parallel --filter=./{apps,packages}/* run dev",
+    "preview": "pnpm -r --parallel --filter=./{apps,packages}/* run preview",
+    "preview:app1": "pnpm --filter=./apps/app1 run preview",
+    "preview:app2": "pnpm --filter=./apps/app2 run preview",
+    "preview:app": "pnpm --filter=./apps/* run preview",
+    "preview:ui": "pnpm --filter=./packages/ui run preview",
+    "gen-icons": "pnpm --filter=./packages/ui run gen-icons",
+    "postinstall": "npx husky install",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.2",
+    "@commitlint/config-conventional": "^17.0.2",
+    "@typescript-eslint/eslint-plugin": "5.29.0",
+    "@typescript-eslint/parser": "^5.29.0",
+    "eslint": "^8.18.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "typescript": "^4.6.3"
+  },
+  "lint-staged": {
+    "*": [
+      "prettier --write --ignore-unknown"
+    ],
+    "*.{js,ts,tsx}": [
+      "eslint --fix"
+    ]
+  },
+  "packageManager": "pnpm@7.3.0",
+  "pnpm": {
+    "packageExtensions": {
+      "postcss-load-config": {
+        "peerDependencies": {
+          "postcss": "*"
+        }
+      }
+    }
+  }
+}

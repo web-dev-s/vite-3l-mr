@@ -1,0 +1,31 @@
+const colors = {
+  monorepo: '#11BE4D',
+  monorepoDark: '#087006',
+  monorepoLight: '#C4FFC0',
+  monorepoCream: '#C8EDC4',
+  monorepoHigh: '#2AD74F',
+  sky: '#0278FF',
+  skyCloudy: '#004BA1',
+  skyFoggy: '#C0DDFF',
+  skyWinter: '#DFEEFF',
+  dust: '#191919',
+  dustLight: '#BFBFBF',
+  dustDark: '#080808',
+  dustInvisible: '#E2E2E2',
+  dustTransparent: '#F4F4F4',
+  black: 'rgba(0,0,0,1)',
+  blackWannabe: 'rgba(0,0,0,0.9)',
+  blackGhost: 'rgba(0,0,0,0.25)',
+  blackTransparent: 'rgba(0,0,0,0.1)',
+  white: 'rgba(255,255,255,1)',
+  whiteEthereal: 'rgba(255,255,255,0.5)',
+  whiteGhost: 'rgba(255,255,255,0.15)',
+  whiteTransparent: 'rgba(255,255,255,0.1)',
+  error: '#EB5757',
+  warning: '#F2994A',
+  success: '#27AE60',
+  grayDark: '#1F1F1F',
+  transparent: 'transparent'
+}
+
+export default colors
