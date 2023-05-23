@@ -29,6 +29,7 @@ yarn.lock
 # dist
 dist
 build
+storybook-static
 
 # dependencies
 node_modules
